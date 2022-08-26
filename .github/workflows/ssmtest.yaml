@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Get SSM parameter value
         id: getparameter
-        uses: mycloudtutorials/aws-ssm-get-parameter-action@v0.1
+        uses: mycloudtutorials/aws-ssm-get-parameter-action@v0.2
         with:
           aws-region: us-west-2
           parameter-name: '/aws/ssm/paramrter/ami-id'
