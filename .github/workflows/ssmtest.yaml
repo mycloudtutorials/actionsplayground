@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   ssm_test:
-    runs-as: ubuntu-latest
+    runs-on: ubuntu-latest
     name: SSM Test
     steps:
       - name: Get SSM parameter value
