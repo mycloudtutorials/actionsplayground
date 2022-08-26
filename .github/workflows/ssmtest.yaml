@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  ssm_test:
+    runs-as: ubuntu-latest
+    name: SSM Test
+    steps:
+      - name: Get SSM parameter value
+        id: get-parameter
+        uses: mycloudtutorials/aws-ssm-get-parameter-action@v0.1
+        with:
+          aws-region: us-west-2
+          parameter-name: '/aws/ssm/paramrter/ami-id'
+      - name: Get the Output line
+        run: echo "OUTPUT::: ${{ steps.get-parameter.outputs.value}}"
