@@ -6,10 +6,10 @@ jobs:
     name: SSM Test
     steps:
       - name: Get SSM parameter value
-        id: get-parameter
+        id: getparameter
         uses: mycloudtutorials/aws-ssm-get-parameter-action@v0.1
         with:
           aws-region: us-west-2
           parameter-name: '/aws/ssm/paramrter/ami-id'
       - name: Get the Output line
-        run: echo "OUTPUT::: ${{ steps.get-parameter.outputs.value}}"
+        run: echo "OUTPUT::: ${{ steps.getparameter.outputs.value }}"
