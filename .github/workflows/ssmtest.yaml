@@ -12,4 +12,4 @@ jobs:
           aws-region: us-west-2
           parameter-name: '/aws/ssm/paramrter/ami-id'
       - name: Get the Output line
-        run: echo "OUTPUT::: ${{ steps.getparameter.outputs.value }}"
+        run: echo "OUTPUT ${{ steps.getparameter.outputs.value }}"
